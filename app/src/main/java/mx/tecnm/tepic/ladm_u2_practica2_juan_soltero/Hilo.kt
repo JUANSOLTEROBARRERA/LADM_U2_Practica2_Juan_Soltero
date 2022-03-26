@@ -11,7 +11,7 @@ class Hilo(este:MainActivity, baraja:List<Carta>) : Thread(){
     private var pausar = false
     var contador = 0
     val este = este
-    val baraja = baraja
+    var baraja = baraja
     override fun run() {
         super.run()
         while(ejecutar){
@@ -136,13 +136,15 @@ class Hilo(este:MainActivity, baraja:List<Carta>) : Thread(){
                     pausar=true
                     este.runOnUiThread {
                         este.findViewById<TextView>(R.id.nomcarta).setText("El juego ha terminado.")
-                        este.findViewById<ImageView>(R.id.cartaimg).visibility = View.GONE
-                        este.findViewById<Button>(R.id.suspender).visibility = View.GONE
+                        if (!this.estapausado()) this.pausarHilo()
+
+                        //este.findViewById<ImageView>(R.id.cartaimg).visibility = View.GONE
+                        //este.findViewById<Button>(R.id.suspender).visibility = View.GONE
                         este.findViewById<Button>(R.id.terminar).visibility = View.VISIBLE
-                        este.findViewById<TextView>(R.id.restantes).visibility = View.GONE
+                        //este.findViewById<TextView>(R.id.restantes).visibility = View.GONE
                     }
                 }
-                sleep(3000)
+                sleep(1000)
 
             }
         }

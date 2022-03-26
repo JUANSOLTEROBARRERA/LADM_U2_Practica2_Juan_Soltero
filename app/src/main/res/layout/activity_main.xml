@@ -51,7 +51,7 @@
         android:layout_below="@id/cartaimg"
         android:layout_marginTop="5dp"
         android:layout_centerHorizontal="true"
-        android:text="SUSPENDER"
+        android:text="LOTERIA"
         android:id="@+id/suspender"/>
     <Button
         android:layout_width="wrap_content"
@@ -67,7 +67,7 @@
         android:layout_below="@id/cartaimg"
         android:layout_marginTop="5dp"
         android:layout_centerHorizontal="true"
-        android:text="Terminar"
+        android:text="Barajar Denuevo"
         android:id="@+id/terminar"/>
 
 </RelativeLayout>
