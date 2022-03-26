@@ -144,7 +144,7 @@ class Hilo(este:MainActivity, baraja:List<Carta>) : Thread(){
                         //este.findViewById<TextView>(R.id.restantes).visibility = View.GONE
                     }
                 }
-                sleep(1000)
+                sleep(3000)
 
             }
         }
