@@ -250,10 +250,10 @@ class MainActivity : AppCompatActivity() {
     fun barajarinicio() {
         var cont = 53
         while (cont >= 0) {
-            var j = Math.floor(Math.random() * (cont + 1)).toInt();
-            var k = cartas[cont];
-            cartas[cont] = cartas[j];
-            cartas[j] = k;
+            var j = Math.floor(Math.random() * (cont + 1)).toInt()
+            var k = cartas[cont]
+            cartas[cont] = cartas[j]
+            cartas[j] = k
             cont--
         }
     }
